@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link href="../static/css/Tambah.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>BudayaKB Lite</title>
+</head>
+
+<body>
+     {% include 'includes/_navbar.html' %}
+    <div class="tambah">
+    <h2>Ubah Budaya</h2><br>
+    <h3>Masukkan Data budaya yang akan diubah</h3>
+    <br>
+    <form method="POST", action="">
+        <input type="text" name="Nama" required placeholder="Nama Budaya" autocomplete="off">
+        <input type="text" name="Tipe" required placeholder="Tipe Budaya" autocomplete="off">
+        <input type="text" name="Provinsi" required placeholder="Asal Provinsi" autocomplete="off">
+        <input type="text" name="URL" required placeholder="URL Referensi" autocomplete="off">
+        <br><br>
+        <input type="submit" name="submit" id="submit" value="Upload">
+    </form>
+    </div>
+
+    <div class="container">
+    {% if result == "True" %}
+	<h3>Sukses mengubah data "{{ name }}"</h3>
+	{% elif result == "False" %}
+    <h3>Data dengan nama "{{ name }}" tidak ada</h3>
+    {% endif %}
+    </div>
+</body>
+</html>

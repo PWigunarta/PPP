@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>BudayaKB Lite-Impor</title>
+    <link rel="stylesheet" href="../static/css/impor.css">
+</head>
+
+<body>
+	 {% include 'includes/_navbar.html' %}
+	<div class="container">
+		<h2>Impor Budaya</h2>
+		<h4>Pilih file CSV berisi data BudayaKB</h4>
+	</div>
+
+	<form method="POST", action="" enctype = "multipart/form-data">
+		<input id="file" type="file" name=file required>
+		<label for="file" class="btn btn1">
+			Impor File
+		</label>
+		<input id="submit" type=submit value="Import Data">
+		<label for="submit" class="btn btn1">
+			Upload File
+		</label>
+	</form>
+	
+
+	{% if result is defined and result >0: %}
+	<div class="container">
+		<h3>{{ result }} data budaya telah terimpor dari file "{{ fname }}"</h3>
+	</div>
+	{% endif %}
+</body>
+</html>
+
+
+
+	
+	

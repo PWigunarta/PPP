@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>BudayaKB Lite</title>
+    <link rel="stylesheet" href="../static/css/Table.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+{% include 'includes/_navbar.html' %}
+<body class="container">
+	<h2>Hasil Pencarian</h2>
+    {% if result is defined and result|length != 0 %}
+        <h4>Ditemukan {{result|length}} data dengan Asal Provinsi Budaya: {{ name }}</h4>
+        <br>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Tipe</th>
+                    <th>Asal</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for v in result %}
+                <tr>
+                    <td align=center> {{ v.nama }} </td>
+                    <td align=center> {{ v.tipe }} </td>
+                    <td align=center> {{ v.prov}} </td>
+                    <td align=center> {{ v.url }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        {% if result is defined and result|length == 0 %}
+        <h4>Tidak ditemukan data dengan Asal Provinsi Budaya: {{ name }} </h4>
+        {% endif %}
+
+
+        {% if result is undefined and msg is defined %}
+        <h4> {{ msg }} </h4>
+        {% endif %}
+</body>
+</html>

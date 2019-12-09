@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>BudayaKB Lite</title>
+    <link rel="stylesheet" href="../static/css/Tambah.css">
+</head>
+
+<body>
+	 {% include 'includes/_navbar.html' %}
+    <div class="Tambah">
+    <h2>Kriteria Pencarian</h2><br><br><br>
+	<form method="POST", action="">
+        <select name="SearchType">
+            <option value="NamaBudaya">Nama Budaya</option>
+            <option value="TipeBudaya">Tipe Budaya</option>
+            <option value="ProvinsiBudaya">Asal Provinsi Budaya</option>
+        </select><br><br>
+        <input type="text" name="aSearch" required autocomplete="off"><br><br><br><br><br><br> 
+        <input type="submit" value="Cari">
+    </form>
+    </div>
+
+</body>
+</html>

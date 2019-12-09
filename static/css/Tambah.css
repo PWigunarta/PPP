@@ -1,0 +1,131 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url("../img/vaporwave.jpg");
+    background-size: cover;
+}
+
+.tambah{
+    background: rgba(44,62,80,0.7);
+    padding: 40px;
+    width: 250px;
+    height: 430px;
+    margin: 0 auto;
+    margin-top: 80px;
+    height: 450px;
+    color: #fff;
+    margin-left: 180x;
+    margin-top: 90px;
+}
+form{
+    width: 240px;
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+input{
+    margin: auto;
+    width: 240px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: #fff;
+}
+
+select{
+    background-color: white;
+    color: #b21f66;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px 5px;
+    overflow: hidden;
+}
+input[type=submit]{
+    background-color: white;
+    color: #b21f66;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: #b21f66;
+    color: white;
+}
+label{
+    color: white;
+    width: 250px;
+    background-color: #f5af09;
+    position: absolute;
+    margin: auto;
+    height: 45px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+h2{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+::placeholder{
+    color: aliceblue;
+    opacity: 0.8;
+}
+
+.btn{
+    width: 100px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ffbd69;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 10px px;
+    margin: 10px;
+    transition: 0.8s;
+    text-decoration: none;
+}
+.btn1{
+    color: #ffbd69;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #ffbd69;
+    z-index: -1;
+    transition: 0.8s;
+}
+.btn1::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+.btn1:hover{
+    color: #b21f66;
+}
+
+.btn1:hover:before{
+    height: 180%;
+}

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>BudayaKB Lite</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="../static/css/Table.css" rel="stylesheet">
+</head>
+
+<body class="container">
+	 {% include 'includes/_navbar.html' %}
+    {% if result is defined and result|length != 0 %}
+        <h4>Statistik data budaya berdasarkan Tipe Budaya </h4>
+        <br>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Kriteria</th>
+                    <th>Jumlah</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in result.items() %}
+                <tr>
+                    <td align=center> {{ key }} </td>
+                    <td align=center> {{ value }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        {% if result is undefined and msg is defined %}
+        <h4> {{ msg }} </h4>
+        {% endif %}
+
+</body>
+</html>
